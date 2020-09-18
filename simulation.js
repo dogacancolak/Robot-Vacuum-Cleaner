@@ -77,7 +77,7 @@ var mySimulation = {
         document.getElementById('start').style.display = 'none';
 
 
-        var algorithm = new Spiral();
+        var algorithm = new Random();
         var fun = algorithm.move.bind(algorithm);
 
         setInterval(fun, 5);
