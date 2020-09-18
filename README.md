@@ -1,3 +1,3 @@
-![Example](/tests/example.png =300x)
+<img src="/tests/example.png" alt="example" width="200"/>
 
 # Robot-Vacuum-Cleaner
