@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+canvas {
+    border: 1px solid #d3d3d3;
+    background-color: transparent;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.furniture-button {
+    position: absolute;
+    z-index: 5;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    display: none;
+    border-radius: 8px;
+}
+
+.furniture-button img {
+    position:absolute;
+    width: 20x;
+    height: 20px;
+    transform: translate(-50%, -50%);
+}
+
+#next {
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffae00;
+    border: 2px solid #ff9100;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size : 15px;
+    display: none;
+}
+
+#start {
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    right: 10px;
+    background-color: #00ff2a;
+    border: 2px solid #008000;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size : 15px;
+    display: none;
+}
+
+button:focus {outline:0;}
+
+</style>
+</head>
+<body onload="setupSimulation()">
+    <div id="canvases" style="position:relative; width:700px; height:500px">
+        <canvas id="background" style="z-index: 1;" height="500" width="700"></canvas>
+        <canvas id="trace" style="z-index: 2;" height="500" width="700"></canvas>
+        <canvas id="walls" style="z-index: 3;" height="500" width="700"></canvas>
+        <canvas id="furniture" style="z-index: 4;" height="500" width="700"></canvas>
+        <canvas id="canvas" style="z-index: 5;" height="500" width="700"></canvas>
+        <button type="button" class="furniture-button" style="background-color: #cf0303; right: 10px; border: 2px solid #800000;" 
+                onclick="furniture_options.setup()"><img src="graphics/x.png"/></button>
+        <button type="button" class="furniture-button" style="background-color: #00ff2a; right: 50px; border: 2px solid #008000;" 
+                onclick="furniture_options.selected.rotate()"><img src="graphics/rotate.png"/></button>
+        <button type="button" id="next" onclick="furniture_options.finalize()">Next >></button>
+        <button type="button" id="start" onclick="mySimulation.start()">Start!</button>
+    </div>
+
+    <img id="lawn" style="display: none;" src="graphics/lawn.jpg"/>
+    <img id="wall" style="display: none;" src="graphics/wall.jpg"/>
+    <img id="floor" style="display: none;" src="graphics/floor.jpg"/>
+    <img id="robot" style="display: none;" src="graphics/robot.png"/>
+    <img id="sofa" style="display: none;" src="graphics/sofa.png"/>
+    <img id="chair" style="display: none;" src="graphics/chair.png"/>
+    <img id="bed" style="display: none;" src="graphics/bed.png"/>
+    
+<script src="simulation/dock.js"></script>
+<script src="simulation/house.js"></script>
+<script src="simulation/robot.js"></script>
+<script src="simulation/furnitures.js"></script>
+<script src="simulation/geometry.js"></script>
+<script src="simulation.js"></script>
+<script src="algorithms/random.js"></script>
+<script src="algorithms/snaking.js"></script>
+<script src="algorithms/spiral.js"></script>
+
+</body>
+</html>
