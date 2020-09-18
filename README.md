@@ -1,3 +1,3 @@
-![Example](/tests/example.png)
+![Example](/tests/example.png =300x)
 
 # Robot-Vacuum-Cleaner
