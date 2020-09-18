@@ -1,3 +1,3 @@
-[Example](/tests/example)
+![Example](/tests/example)
 
 # Robot-Vacuum-Cleaner
