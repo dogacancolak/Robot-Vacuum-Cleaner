@@ -17,3 +17,5 @@ It will feature the following algorithms:
 
 ### Why this project?
 It all started with mom buying a Roomba, which led me to observe its behavior and inspired me to explore this rather trivial technology in our daily lives.
+
+![Demo](/tests/demo.gif)
