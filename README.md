@@ -5,3 +5,5 @@ Click on image to open simulation!
 
 # Robot Vacuum Cleaner Simulation
 A simulation where different [coverage path planning algorithms](https://www.cnet.com/news/how-to-choose-the-best-robot-vacuum-for-your-home-roomba-neato-ecovacs-2019/) can be tested in customized indoor environments.
+
+Which algorithm for a robot vacuum cleaner will perform better in which environments?
