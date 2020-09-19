@@ -8,7 +8,7 @@ Click on image to open simulation!
 
 This is a simulation where different [coverage path planning algorithms](https://www.cnet.com/news/how-to-choose-the-best-robot-vacuum-for-your-home-roomba-neato-ecovacs-2019/) can be tested in customized indoor environments.
 
-It features the following algorithms:
+It will feature the following algorithms:
 * Random walk
 * Snaking
 * Spiraling
