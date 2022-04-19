@@ -1,10 +1,10 @@
 // The Algorithm:
 // 1. Start
-// 2. Go forward.
-// 3. Check for collision.
-// 3. If collision on left bumper, turn right for some time, then go back to step 2.
-// 4. If collision on right bumper, turn left for some time, then go back to step 2.
-// 5. If could not move x pixels uninterrupted by obstacles, means robot is stuck in corner, 
+// 2. Check for collision.
+// 3. Go forward.
+// 4. If collision on left bumper, turn right for some time, then go back to step 2.
+// 5. If collision on right bumper, turn left for some time, then go back to step 2.
+// 6. If could not move 20 pixels uninterrupted by obstacles, means robot is stuck in corner, 
 //    steer right until escape.
 
 class Random {
@@ -22,7 +22,7 @@ class Random {
 
     // call on collision, with boolean parameter 'left' indicating whether the collision was on the left of the bumper
     onCollision(left) {
-        if (this.distanceNonstop < 20) {    // if the robot could not travel 10 pixels without an obstacle
+        if (this.distanceNonstop < 20) {    // if the robot could not travel 20 pixels without an obstacle
             this.cornered = true;           // means the robot is probably cornered and needs an escape maneuver
         }
         else {  // if the robot has travelled freely, generate random direction
@@ -53,7 +53,7 @@ class Random {
         }
         else if (this.cornered) {
             robot.steerRight();      // if cornered, steer right (repeat until escape)
-            this.cornered = false;   // assume not cornered until next collision within 10 pixel radius
+            this.cornered = false;   // assume not cornered until next collision within 20 pixel radius
         }
         else {
             robot.advance();

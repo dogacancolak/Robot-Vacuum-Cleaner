@@ -52,6 +52,10 @@ class Robot {
         return this.didPartCollide(-this.radius, 0);
     }
 
+    collide() {
+        return this.leftCollide() || this.rightCollide();
+    }
+
     advance() {
         // erase old position
         this.erase();

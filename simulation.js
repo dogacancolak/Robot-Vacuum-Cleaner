@@ -77,7 +77,7 @@ var mySimulation = {
         document.getElementById('start').style.display = 'none';
 
 
-        var algorithm = new Random();
+        var algorithm = new Snaking();
         var fun = algorithm.move.bind(algorithm);
 
         setInterval(fun, 5);
@@ -86,12 +86,3 @@ var mySimulation = {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     },
 }
-
-// function updateSimulation() {
-//     if (robot.leftCollide() || robot.rightCollide()) {
-//         robot.steerRight();
-//     }
-//     else {
-//         robot.advance();
-//     }
-// }
